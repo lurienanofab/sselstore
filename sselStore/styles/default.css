@@ -1,0 +1,501 @@
+html, body, form {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    font-family: Verdana, Arial, Sans-Serif;
+    font-size: 10pt;
+    background: #FFFFFF;
+}
+
+h1 {
+    margin-top: 10px;
+    font-size: 14pt;
+    color: #cc6600;
+    letter-spacing: 2px;
+}
+
+h2 {
+    margin-top: 10px;
+    font-size: 12pt;
+    color: #000066;
+    letter-spacing: 1px;
+    display: inline;
+}
+
+    h2.block {
+        display: block;
+    }
+
+    h2.shaded {
+        color: #CCCCCC;
+        display: inline;
+    }
+
+.news-edit {
+    color: #000066;
+    font-weight: bold;
+}
+
+    h2 a, .news-edit a.edit-link, a.cancel-link {
+        font-size: 8pt;
+        color: #65738e;
+        font-weight: bold;
+    }
+
+h3 {
+    margin-top: 10px;
+    font-size: 8pt;
+    color: #cc6600;
+    letter-spacing: 2px;
+}
+
+img {
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    border-bottom-style: none;
+}
+
+a {
+    color: #000000;
+}
+
+p {
+    padding: 11px;
+    margin-bottom: 7px;
+}
+
+.HyperLinkNormal {
+    color: Blue;
+}
+
+a:hover, a.edit-link:hover {
+    color: #AABBDD;
+    text-decoration: underline;
+}
+
+a.headerNavigation {
+    color: #FFFFFF;
+}
+
+    a.headerNavigation:hover {
+        color: #FFFFFF;
+    }
+
+dt {
+    font-weight: bold;
+}
+/* Order report form - printer friendly related */
+.TableStoreOrderFormHeader {
+    width: 650px;
+    border: solid 1px Black;
+    margin-bottom: 10px;
+    height: 150px;
+}
+
+.TableStoreOrderForm {
+    width: 650px;
+    border: solid 1px Black;
+    margin-bottom: 10px;
+    height: 570px;
+}
+
+.TableStoreOrderFormFooter {
+    width: 650px;
+    border: solid 1px Black;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
+.TableStoreOrderFormCell {
+    border: solid 1px Black;
+    margin-bottom: 10px;
+    width: 325px;
+}
+
+.print_order {
+    border-collapse: collapse;
+}
+
+.PrintHeadTitleTextFont {
+    width: 650px;
+    font-size: x-large;
+    text-align: center;
+}
+
+.PrintTitleTextFont {
+    font-size: large;
+    font-weight: bold;
+    background-color: Gray;
+    text-align: center;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.PrintRegularTextFont {
+    text-align: left;
+    font-size: medium;
+    padding: 3px;
+    vertical-align: top;
+}
+
+.plainbox {
+    padding: 11px;
+    margin-bottom: 7px;
+    width: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    color: #696969;
+    font: .7em Verdana, Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+/* for search box only */
+.textboxheader {
+    font-weight: bold;
+    font-size: 8pt;
+    color: #f5f5f5;
+    font-family: verdana;
+    background-color: #65738E;
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+    padding-top: 3px;
+    width: 165px;
+}
+
+/* for search box only */
+.textbox {
+    border: solid 1px #CBCED4;
+    background: #f5f5f5;
+    padding: 11px;
+    margin-bottom: 7px;
+    width: 156px;
+}
+
+#bodywrapper {
+    margin-left: 60px;
+    margin-right: 60px;
+    width: 1000px;
+}
+
+#columnleft {
+    width: 180px;
+    float: left;
+    font-size: 8pt;
+}
+
+#columnright {
+    border-left: 1px dotted #DCDCDC;
+    width: 819px;
+    height: 800px;
+    float: right;
+}
+
+.placeholderlayout {
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+}
+
+#sitelogobox {
+    padding-bottom: 3px;
+    border-bottom: solid 1px #DCDCDC;
+}
+
+#sitelogotext {
+    font-size: 15pt;
+    color: #65738E;
+    float: left;
+    letter-spacing: 2px;
+}
+
+#menutext {
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+div#menutext {
+    padding-top: 10px;
+}
+
+#menutext ul {
+    margin: 0px;
+    padding: 0px;
+    list-style-image: none;
+}
+
+#menutext li {
+    display: inline;
+    word-spacing: 5px;
+}
+
+#menutext a:link, #menutext a:visited {
+    padding-left: 12px;
+    font-size: 8pt;
+    color: #65738E;
+    text-decoration: none;
+}
+
+#menutext a:active, #menutext a:hover {
+    color: #717052;
+}
+
+div.detail_form_row {
+    margin-bottom: 20px;
+}
+
+span.detail_form_column {
+    border: none 3px #CBCED4;
+    padding-right: 40px;
+}
+
+span.detail_form_column_right {
+    padding-left: 450px;
+}
+
+.searchbox {
+    border-right: #dcdcdc 1px solid;
+    border-top: #dcdcdc 1px solid;
+    font-size: 8pt;
+    border-left: #dcdcdc 1px solid;
+    border-bottom: #dcdcdc 1px solid;
+    font-family: verdana;
+}
+
+.thumbimage {
+    width: 110px;
+    height: 100px;
+}
+
+.thumbimagetweezer {
+    width: 110px;
+    height: 27px;
+}
+
+.thumbimagepen {
+    width: 110px;
+    height: 47px;
+}
+
+.sidemenulink {
+    font-size: 8pt;
+    font-family: verdana;
+}
+
+.warningtext {
+    color: Red;
+}
+
+strong {
+    color: #696969;
+}
+
+.addtocartlink {
+    font-size: 10pt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #C7C030;
+}
+
+.paragraph_header_font {
+    font-weight: bold;
+    color: Blue;
+}
+
+.repeater {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+    .repeater td, .repeater th {
+        padding: 3px;
+        border: 1px solid #DCDCDC;
+    }
+
+    .repeater th {
+        background-color: #DCDCDC;
+    }
+
+    .repeater td.item {
+        background-color: #EEEEEE;
+    }
+
+    .repeater td.alt_item {
+        background-color: #FFFFFF;
+    }
+
+.watermark {
+    color: #999999;
+    font-style: italic;
+    font-family: Arial;
+}
+
+.order_detail_container {
+    margin-bottom: 20px;
+}
+
+.order_header {
+    border-collapse: collapse;
+}
+
+    .order_header td {
+        padding: 5px;
+        vertical-align: top;
+    }
+
+.error {
+    color: #FF0000;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.store-news {
+    margin-top: 0px;
+    padding-top: 5px;
+    border-top: 1px solid #B2B2B2;
+}
+
+.store-map {
+    margin-top: 15px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    border-top: 1px solid #B2B2B2;
+}
+
+.store-news-textarea {
+    width: 100%;
+    height: 450px;
+}
+
+.store-news-content p {
+    margin: 0;
+    padding: 5px;
+}
+
+.store-news-content strong {
+    font-weight: bold;
+    color: #000000;
+}
+
+.item-notes {
+    font-weight: bold;
+    color: #696969;
+}
+
+.store-grid {
+    border: none;
+    font-size: 8pt;
+    color: dimgray;
+    font-family: verdana;
+    background-color: #fff;
+    width: 100%;
+}
+
+    .store-grid th,
+    .store-grid td {
+        padding: 3px;
+        border: 1px solid gainsboro;
+    }
+
+    .store-grid .header {
+        background-color: gainsboro;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .store-grid .row {
+        background-color: #eee;
+        color: #000;
+    }
+
+    .store-grid .altrow {
+        background-color: #fff;
+        color: #000;
+    }
+
+    .store-grid .selected-row {
+        background-color: lightyellow;
+        font-weight: bold;
+        color: #000;
+    }
+
+    .store-grid .footer {
+        background-color: #ccc;
+        color: #000;
+    }
+
+    .store-grid .pager {
+        background-color: beige;
+        color: #000;
+        text-align: center;
+    }
+
+    .store-grid td.centered {
+        text-align: center;
+    }
+
+.store-tree {
+    font-size: 8pt;
+    overflow: hidden;
+}
+
+    .store-tree .node {
+        padding-top: 2px 5px 2px 5px;
+    }
+
+    .store-tree .root-node {
+        background-color: transparent;
+    }
+
+    .store-tree .selected-node {
+        background-color: transparent;
+        font-weight: bold;
+    }
+
+    .store-tree .hover-node {
+        background-color: lightyellow;
+        text-decoration: underline;
+    }
+
+.stock-error {
+    background-color: #f2dede;
+    border: solid 1px #ebccd1;
+    color: #a94442;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.cart {
+    width: 100%;
+}
+
+.numeric-text {
+    text-align: right;
+}
+
+/*
+<asp:GridView runat="server" Style="border-right: gainsboro 1px solid;
+    border-top: gainsboro 1px solid; font-size: 8pt; border-left: gainsboro 1px solid;
+    color: dimgray; border-bottom: gainsboro 1px solid; font-family: verdana" BackColor="White" BorderColor="#999999" BorderStyle="None" 
+    BorderWidth="1px" CellPadding="3" GridLines="Vertical">
+    <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+    <RowStyle BackColor="#EEEEEE" ForeColor="Black" />
+    <PagerSettings Mode="NumericFirstLast" FirstPageText="First" LastPageText="Last" />    
+    <PagerStyle BackColor="Beige" ForeColor="Black" HorizontalAlign="Center" />
+    <SelectedRowStyle BackColor="lightyellow" Font-Bold="True" ForeColor="Black" />
+    <HeaderStyle BackColor="gainsboro" Font-Bold="True" ForeColor="black"  />
+    <AlternatingRowStyle BackColor="white" />
+</asp:GridView>
+
+<asp:TreeView runat="server">
+    <HoverNodeStyle BackColor="LightYellow" Font-Underline="true" />
+    <RootNodeStyle BackColor="Transparent" />
+    <SelectedNodeStyle BackColor="Transparent" Font-Bold="True" />
+    <NodeStyle VerticalPadding="2" NodeSpacing="1" HorizontalPadding="5" />             
+</asp:TreeView>    
+*/

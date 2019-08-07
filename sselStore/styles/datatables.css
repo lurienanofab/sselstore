@@ -1,0 +1,185 @@
+.dataTables_wrapper {
+    /*padding: 20px;
+	background-color: #f7f7f7;
+	background-color: #fcfcfc;
+	border: solid 1px #eee;
+	border-radius: 3px;
+	box-shadow: 4px 4px 6px #CCC;*/
+}
+
+.dataTable {
+    clear: both;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border: none;
+    font-size: 8pt;
+    color: dimgray;
+    font-family: verdana;
+    background-color: #fff;
+    width: 100%;
+}
+
+    .dataTable th {
+        padding: 3px;
+        border: 1px solid gainsboro;
+        background-color: gainsboro;
+        font-weight: bold;
+        color: #000;
+    }
+
+        .dataTable th.sorting {
+            background-image: url(//ssel-apps.eecs.umich.edu/static/images/sorting.png);
+            background-repeat: no-repeat;
+            background-position: 98% center;
+        }
+
+        .dataTable th.sorting_asc {
+            background-image: url(//ssel-apps.eecs.umich.edu/static/images/sorting_asc.png);
+            background-repeat: no-repeat;
+            background-position: 98% center;
+        }
+
+        .dataTable th.sorting_desc {
+            background-image: url(//ssel-apps.eecs.umich.edu/static/images/sorting_desc.png);
+            background-repeat: no-repeat;
+            background-position: 98% center;
+        }
+
+    .dataTable td {
+        padding: 3px;
+        border: 1px solid gainsboro;
+    }
+
+.dataTables_length {
+    float: left;
+    margin-bottom: 10px;
+    font-size: 10pt;
+}
+
+    .dataTables_length select {
+        font-size: 12pt;
+        height: 24px;
+    }
+
+.dataTables_filter {
+    float: right;
+    margin-bottom: 10px;
+    font-size: 10pt;
+}
+
+    .dataTables_filter input {
+        font-size: 12pt;
+        height: 24px;
+        width: 200px;
+        margin-left: 5px;
+    }
+
+.dataTables_info {
+    display: inline-block;
+    width: 40%;
+    margin-bottom: 0px;
+}
+
+.dataTables_paginate {
+    text-align: right;
+    display: inline-block;
+    width: 60%;
+    margin-bottom: 0px;
+    /* prevent selecting in the paginate area */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+    .dataTables_paginate .paginate_button,
+    .dataTables_paginate .paginate_active {
+        border: solid 1px #bababa;
+        margin-right: 3px;
+        background-color: #FFF;
+        padding: 3px 8px 3px 8px;
+        cursor: pointer;
+    }
+
+    .dataTables_paginate.paging_two_button a:hover {
+        text-decoration: none;
+    }
+
+    .dataTables_paginate.paging_two_button a.paginate_enabled_next:hover,
+    .dataTables_paginate.paging_two_button a.paginate_enabled_previous:hover {
+        color: #336699;
+    }
+
+    .dataTables_paginate .paginate_active {
+        background-color: #D3D6FF;
+    }
+
+        .dataTables_paginate .paginate_button:hover,
+        .dataTables_paginate .paginate_active:hover {
+            border-color: #808080;
+        }
+
+    .dataTables_paginate .paginate_button.paginate_button_disabled {
+        color: #808080;
+    }
+
+        .dataTables_paginate .paginate_button.paginate_button_disabled:hover {
+            border-color: #BABABA;
+        }
+
+    .dataTables_paginate .paginate_disabled_previous {
+        margin-right: 3px;
+        padding-right: 3px;
+        border-right: solid 1px #666;
+        color: #808080;
+        cursor: pointer;
+        background: none;
+        padding-left: 16px;
+    }
+
+    .dataTables_paginate .paginate_enabled_previous {
+        margin-right: 3px;
+        padding-right: 3px;
+        border-right: solid 1px #666;
+        cursor: pointer;
+        background: url(//ssel-apps.eecs.umich.edu/static/images/big-goto-prev.png) no-repeat left;
+        padding-left: 16px;
+    }
+
+    .dataTables_paginate .paginate_disabled_next {
+        color: #808080;
+        cursor: pointer;
+        background: none;
+        padding-right: 16px;
+    }
+
+    .dataTables_paginate .paginate_enabled_next {
+        cursor: pointer;
+        background: url(//ssel-apps.eecs.umich.edu/static/images/big-goto-next.png) no-repeat right;
+        padding-right: 16px;
+    }
+
+/***** Stripes *****/
+.dataTable.striped td {
+    
+}
+
+.dataTable.striped tr.odd {
+    background-color: #eee;
+    color: #000;
+}
+
+    .dataTable.striped tr.odd td.sorting_1 {
+        background-color: #eee;
+    }
+
+.dataTable.striped tr.even {
+    background-color: #fff;
+    color: #000;
+}
+
+    .dataTable.striped tr.even td.sorting_1 {
+        background-color: #fff;
+    }

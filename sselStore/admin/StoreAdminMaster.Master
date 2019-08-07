@@ -1,0 +1,62 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="StoreAdminMaster.master.vb" Inherits="sselStore.Admin.StoreAdminMaster" %>
+
+<%@ Register Src="~/Controls/AdminSideMenu.ascx" TagName="AdminSideMenu" TagPrefix="uc" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Store Administration</title>
+
+    <link rel="stylesheet" href="//ssel-apps.eecs.umich.edu/static/lib/jquery-ui/themes/smoothness/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../styles/datatables.css" />
+    <link rel="stylesheet" href="../styles/default.css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="bodywrapper">
+            <div id="sitelogobox">
+                <div id="sitelogotext">
+                    <asp:HyperLink ID="hylTitle" Font-Underline="false" NavigateUrl="~/admin" runat="server" Text="Store Administration"></asp:HyperLink>
+                </div>
+                <ul id="menutext">
+                    <li>
+                        <asp:HyperLink ID="hylMain" NavigateUrl="~/admin/OrderManager.aspx?tab=0&menu=0" runat="server" Text="Main" /></li>
+                    <li>
+                        <asp:HyperLink ID="hylUtility" NavigateUrl="~/admin/ItemManager.aspx?tab=1&menu=0" runat="server" Text="Utility" /></li>
+                    <li>
+                        <asp:HyperLink ID="hylStoreFront" NavigateUrl="~/?tab=0" runat="server" Text="Store" /></li>
+                    <li>
+                        <asp:HyperLink ID="hylExitApp" NavigateUrl="/sselonline/Blank.aspx" runat="server" Text="Exit" /></li>
+                </ul>
+            </div>
+            <div id="columnleft">
+                <uc:AdminSideMenu ID="AdminSideMenu1" runat="server" />
+            </div>
+            <div id="columnright">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <div style="clear: both;">
+            </div>
+        </div>
+    </form>
+
+    <script src="//ssel-apps.eecs.umich.edu/static/lib/jquery/jquery.min.js"></script>
+    <script src="//ssel-apps.eecs.umich.edu/static/lib/jquery-ui/jquery-ui.min.js"></script>
+    <script src="//ssel-apps.eecs.umich.edu/static/lib/datatables/js/jquery.dataTables.min.js"></script>
+    <%--<script src="//ssel-apps.eecs.umich.edu/x/scripts/jquery/jquery.watermark.js"></script>--%>
+    <script src="../scripts/store.js"></script>
+    
+    <script>
+        $(document).ready(function () {
+            $(".searchbox").focus();
+        });
+    </script>
+    
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

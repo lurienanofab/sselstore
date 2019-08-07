@@ -1,0 +1,688 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{C3652202-0B30-460B-ACC1-A8EFD5ABB440}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>sselStore</RootNamespace>
+    <AssemblyName>sselStore</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>sselStore.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>sselStore.xml</DocumentationFile>
+    <NoWarn>
+    </NoWarn>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\CategoryManager.aspx" />
+    <Content Include="admin\InventoryManager.aspx" />
+    <Content Include="admin\ItemManager.aspx" />
+    <Content Include="admin\ItemManagerCreateStep1.aspx" />
+    <Content Include="admin\ItemManagerCreateStep2.aspx" />
+    <Content Include="admin\ItemManagerDetail.aspx" />
+    <Content Include="admin\ItemManagerPricing.aspx" />
+    <Content Include="admin\KitManager.aspx" />
+    <Content Include="admin\OrderManager.aspx" />
+    <Content Include="admin\OrderManagerDetail.aspx" />
+    <Content Include="admin\PrintInventory.aspx" />
+    <Content Include="admin\PrintOrder.aspx" />
+    <Content Include="admin\SearchOrder.aspx" />
+    <Content Include="admin\SecurityManager.aspx" />
+    <Content Include="admin\UserLabel.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="Catalog.aspx" />
+    <Content Include="CatalogKit.aspx" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Controls\AdminSideMenu.ascx" />
+    <Content Include="Controls\CartView.ascx" />
+    <Content Include="Controls\CatalogList.ascx" />
+    <Content Include="Controls\OrderDetail.ascx" />
+    <Content Include="Controls\OrderList.ascx" />
+    <Content Include="Global.asax" />
+    <Content Include="Help.aspx" />
+    <Content Include="images\calendar.gif" />
+    <Content Include="images\icons\icon_find.gif" />
+    <Content Include="images\icons\stock_ok.gif" />
+    <Content Include="images\icons\stock_warning.gif" />
+    <Content Include="images\icons\stock_zero.gif" />
+    <Content Include="images\im_cancel.gif" />
+    <Content Include="images\im_delete.gif" />
+    <Content Include="images\im_edit.gif" />
+    <Content Include="images\im_update.gif" />
+    <Content Include="images\im_viewdetail.gif" />
+    <Content Include="images\items\cat11.jpg" />
+    <Content Include="images\items\cat12.jpg" />
+    <Content Include="images\items\cat13.jpg" />
+    <Content Include="images\items\cat14.jpg" />
+    <Content Include="images\items\cat15.jpg" />
+    <Content Include="images\items\cat16.jpg" />
+    <Content Include="images\items\cat17.jpg" />
+    <Content Include="images\items\cat18.jpg" />
+    <Content Include="images\items\cat19.jpg" />
+    <Content Include="images\items\cat22.jpg" />
+    <Content Include="images\items\cat25.jpg" />
+    <Content Include="images\items\cat26.jpg" />
+    <Content Include="images\items\cat32.jpg" />
+    <Content Include="images\items\default.jpg" />
+    <Content Include="images\items\img000001.jpg" />
+    <Content Include="images\items\img000002.jpg" />
+    <Content Include="images\items\img000003.jpg" />
+    <Content Include="images\items\img000004.jpg" />
+    <Content Include="images\items\img000008.jpg" />
+    <Content Include="images\items\img000012.jpg" />
+    <Content Include="images\items\img000013.jpg" />
+    <Content Include="images\items\img000015.jpg" />
+    <Content Include="images\items\img000016.jpg" />
+    <Content Include="images\items\img000017.jpg" />
+    <Content Include="images\items\img000018.jpg" />
+    <Content Include="images\items\img000019.jpg" />
+    <Content Include="images\items\img000020.jpg" />
+    <Content Include="images\items\img000021.jpg" />
+    <Content Include="images\items\img000022.jpg" />
+    <Content Include="images\items\img000023.jpg" />
+    <Content Include="images\items\img000031.jpg" />
+    <Content Include="images\items\img000044.jpg" />
+    <Content Include="images\items\img000045.jpg" />
+    <Content Include="images\items\img000046.jpg" />
+    <Content Include="images\items\img000047.jpg" />
+    <Content Include="images\items\img000048.jpg" />
+    <Content Include="images\items\img000049.jpg" />
+    <Content Include="images\items\img000050.jpg" />
+    <Content Include="images\items\img000051.jpg" />
+    <Content Include="images\items\img000052.jpg" />
+    <Content Include="images\items\img000059.jpg" />
+    <Content Include="images\items\img000060.jpg" />
+    <Content Include="images\items\img000061.jpg" />
+    <Content Include="images\items\img000068.jpg" />
+    <Content Include="images\items\img000074.jpg" />
+    <Content Include="images\items\img000082.jpg" />
+    <Content Include="images\items\img000083.jpg" />
+    <Content Include="images\items\img000084.jpg" />
+    <Content Include="images\items\img000085.jpg" />
+    <Content Include="images\items\img000091.jpg" />
+    <Content Include="images\items\img000092.jpg" />
+    <Content Include="images\items\img000109.jpg" />
+    <Content Include="images\items\img000110.jpg" />
+    <Content Include="images\items\img000111.jpg" />
+    <Content Include="images\items\img000112.jpg" />
+    <Content Include="images\items\img000113.jpg" />
+    <Content Include="images\items\img000114.jpg" />
+    <Content Include="images\items\img000128.jpg" />
+    <Content Include="images\items\img000129.jpg" />
+    <Content Include="images\items\img000130.jpg" />
+    <Content Include="images\items\img000131.jpg" />
+    <Content Include="images\items\img000133.jpg" />
+    <Content Include="images\items\img000135.jpg" />
+    <Content Include="images\items\img000137.jpg" />
+    <Content Include="images\items\img000138.jpg" />
+    <Content Include="images\items\img000139.jpg" />
+    <Content Include="images\items\img000149.jpg" />
+    <Content Include="images\items\img000156.jpg" />
+    <Content Include="images\items\img000157.jpg" />
+    <Content Include="images\items\img000158.jpg" />
+    <Content Include="images\items\img000159.jpg" />
+    <Content Include="images\items\img000160.jpg" />
+    <Content Include="images\items\img000161.jpg" />
+    <Content Include="images\items\img000162.jpg" />
+    <Content Include="images\items\img000163.jpg" />
+    <Content Include="images\items\img000164.jpg" />
+    <Content Include="images\items\img000165.jpg" />
+    <Content Include="images\items\img000166.jpg" />
+    <Content Include="images\items\img000167.jpg" />
+    <Content Include="images\items\img000168.jpg" />
+    <Content Include="images\items\img000179.jpg" />
+    <Content Include="images\items\img000182.jpg" />
+    <Content Include="images\items\img000183.jpg" />
+    <Content Include="images\items\img000184.jpg" />
+    <Content Include="images\items\img000185.jpg" />
+    <Content Include="images\items\img000189.jpg" />
+    <Content Include="images\items\img000190.jpg" />
+    <Content Include="images\items\img000191.jpg" />
+    <Content Include="images\items\img000193.jpg" />
+    <Content Include="images\items\img000202.jpg" />
+    <Content Include="images\items\img000227.jpg" />
+    <Content Include="images\items\img000231.jpg" />
+    <Content Include="images\items\img000232.jpg" />
+    <Content Include="images\items\img000233.jpg" />
+    <Content Include="images\items\img000234.jpg" />
+    <Content Include="images\items\img000235.jpg" />
+    <Content Include="images\items\img000236.jpg" />
+    <Content Include="images\items\img000238.jpg" />
+    <Content Include="images\items\img000239.jpg" />
+    <Content Include="images\items\img000240.jpg" />
+    <Content Include="images\items\img000241.jpg" />
+    <Content Include="images\items\img000242.jpg" />
+    <Content Include="images\items\img000243.jpg" />
+    <Content Include="images\items\img000244.jpg" />
+    <Content Include="images\items\img000245.jpg" />
+    <Content Include="images\items\img000246.jpg" />
+    <Content Include="images\items\img000247.jpg" />
+    <Content Include="images\items\img000248.jpg" />
+    <Content Include="images\items\img000249.jpg" />
+    <Content Include="images\items\img000250.jpg" />
+    <Content Include="images\items\img000251.jpg" />
+    <Content Include="images\items\img000252.jpg" />
+    <Content Include="images\items\img000253.jpg" />
+    <Content Include="images\items\img000259.jpg" />
+    <Content Include="images\items\img000260.jpg" />
+    <Content Include="images\items\img000261.jpg" />
+    <Content Include="images\items\img000262.jpg" />
+    <Content Include="images\items\img000263.jpg" />
+    <Content Include="images\items\img000280.jpg" />
+    <Content Include="images\items\img000281.jpg" />
+    <Content Include="images\items\img000282.jpg" />
+    <Content Include="images\items\img000283.jpg" />
+    <Content Include="images\items\img000284.jpg" />
+    <Content Include="images\items\img000285.jpg" />
+    <Content Include="images\items\img000286.jpg" />
+    <Content Include="images\items\img000287.jpg" />
+    <Content Include="images\items\img000288.jpg" />
+    <Content Include="images\items\img000289.jpg" />
+    <Content Include="images\items\img000290.jpg" />
+    <Content Include="images\items\img000291.jpg" />
+    <Content Include="images\items\img000292.jpg" />
+    <Content Include="images\items\img000293.jpg" />
+    <Content Include="images\items\img000294.jpg" />
+    <Content Include="images\items\img000295.jpg" />
+    <Content Include="images\items\img000305.jpg" />
+    <Content Include="images\items\img000339.jpg" />
+    <Content Include="images\items\img000342.jpg" />
+    <Content Include="images\items\img000343.jpg" />
+    <Content Include="images\items\img000344.jpg" />
+    <Content Include="images\items\img000365.jpg" />
+    <Content Include="images\items\img000366.jpg" />
+    <Content Include="images\items\Kit.jpg" />
+    <Content Include="images\morearrow.gif" />
+    <Content Include="images\printer.gif" />
+    <Content Include="images\ssellogo.jpg" />
+    <Content Include="images\store-location.jpg" />
+    <Content Include="index.aspx" />
+    <Content Include="ItemDetail.aspx" />
+    <Content Include="labeltemplates\mini.xml" />
+    <Content Include="labeltemplates\userlabel - Copy.xml" />
+    <Content Include="labeltemplates\userlabel.xml" />
+    <Content Include="Maintenance.aspx" />
+    <Content Include="NoAccess.aspx" />
+    <Content Include="OrderDetail.aspx" />
+    <Content Include="OrderReceipt.aspx" />
+    <Content Include="Orders.aspx" />
+    <Content Include="scripts\DYMO.Label.Framework.latest.js" />
+    <Content Include="scripts\LabelUtils.js" />
+    <Content Include="scripts\store.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="styles\datatables.css" />
+    <Content Include="styles\default.css" />
+    <Content Include="styles\store-news.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin\CategoryManager.aspx.designer.vb">
+      <DependentUpon>CategoryManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\CategoryManager.aspx.vb">
+      <DependentUpon>CategoryManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\InventoryManager.aspx.designer.vb">
+      <DependentUpon>InventoryManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\InventoryManager.aspx.vb">
+      <DependentUpon>InventoryManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ItemManager.aspx.designer.vb">
+      <DependentUpon>ItemManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ItemManager.aspx.vb">
+      <DependentUpon>ItemManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ItemManagerCreateStep1.aspx.designer.vb">
+      <DependentUpon>ItemManagerCreateStep1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ItemManagerCreateStep1.aspx.vb">
+      <DependentUpon>ItemManagerCreateStep1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ItemManagerCreateStep2.aspx.designer.vb">
+      <DependentUpon>ItemManagerCreateStep2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ItemManagerCreateStep2.aspx.vb">
+      <DependentUpon>ItemManagerCreateStep2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ItemManagerDetail.aspx.designer.vb">
+      <DependentUpon>ItemManagerDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ItemManagerDetail.aspx.vb">
+      <DependentUpon>ItemManagerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\ItemManagerPricing.aspx.designer.vb">
+      <DependentUpon>ItemManagerPricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\ItemManagerPricing.aspx.vb">
+      <DependentUpon>ItemManagerPricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\KitManager.aspx.designer.vb">
+      <DependentUpon>KitManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\KitManager.aspx.vb">
+      <DependentUpon>KitManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrderManager.aspx.designer.vb">
+      <DependentUpon>OrderManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrderManager.aspx.vb">
+      <DependentUpon>OrderManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\OrderManagerDetail.aspx.designer.vb">
+      <DependentUpon>OrderManagerDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\OrderManagerDetail.aspx.vb">
+      <DependentUpon>OrderManagerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\PrintInventory.aspx.designer.vb">
+      <DependentUpon>PrintInventory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PrintInventory.aspx.vb">
+      <DependentUpon>PrintInventory.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\PrintOrder.aspx.designer.vb">
+      <DependentUpon>PrintOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\PrintOrder.aspx.vb">
+      <DependentUpon>PrintOrder.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="admin\SearchOrder.aspx.designer.vb">
+      <DependentUpon>SearchOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SearchOrder.aspx.vb">
+      <DependentUpon>SearchOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\SecurityManager.aspx.designer.vb">
+      <DependentUpon>SecurityManager.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\SecurityManager.aspx.vb">
+      <DependentUpon>SecurityManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\StoreAdminMaster.Master.designer.vb">
+      <DependentUpon>StoreAdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\StoreAdminMaster.Master.vb">
+      <DependentUpon>StoreAdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\UserLabel.aspx.designer.vb">
+      <DependentUpon>UserLabel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\UserLabel.aspx.vb">
+      <DependentUpon>UserLabel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ajax\items.ashx.vb">
+      <DependentUpon>items.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ajax\news.ashx.vb">
+      <DependentUpon>news.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.vb">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.vb">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Catalog.aspx.designer.vb">
+      <DependentUpon>Catalog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Catalog.aspx.vb">
+      <DependentUpon>Catalog.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatalogKit.aspx.designer.vb">
+      <DependentUpon>CatalogKit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatalogKit.aspx.vb">
+      <DependentUpon>CatalogKit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\AdminSideMenu.ascx.designer.vb">
+      <DependentUpon>AdminSideMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\AdminSideMenu.ascx.vb">
+      <DependentUpon>AdminSideMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CartView.ascx.designer.vb">
+      <DependentUpon>CartView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CartView.ascx.vb">
+      <DependentUpon>CartView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\CatalogList.ascx.designer.vb">
+      <DependentUpon>CatalogList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\CatalogList.ascx.vb">
+      <DependentUpon>CatalogList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderDetail.ascx.designer.vb">
+      <DependentUpon>OrderDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderDetail.ascx.vb">
+      <DependentUpon>OrderDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\OrderList.ascx.designer.vb">
+      <DependentUpon>OrderList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\OrderList.ascx.vb">
+      <DependentUpon>OrderList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.designer.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help.aspx.vb">
+      <DependentUpon>Help.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.vb">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemDetail.aspx.designer.vb">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail.aspx.vb">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Maintenance.aspx.designer.vb">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Maintenance.aspx.vb">
+      <DependentUpon>Maintenance.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="NoAccess.aspx.designer.vb">
+      <DependentUpon>NoAccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NoAccess.aspx.vb">
+      <DependentUpon>NoAccess.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.designer.vb">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.aspx.vb">
+      <DependentUpon>OrderDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OrderReceipt.aspx.designer.vb">
+      <DependentUpon>OrderReceipt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OrderReceipt.aspx.vb">
+      <DependentUpon>OrderReceipt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Orders.aspx.designer.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Orders.aspx.vb">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="StoreMaster.Master.designer.vb">
+      <DependentUpon>StoreMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="StoreMaster.Master.vb">
+      <DependentUpon>StoreMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ajax\news.ashx" />
+    <Content Include="admin\StoreAdminMaster.Master" />
+    <Content Include="ajax\items.ashx" />
+    <Content Include="labeltemplates\userlabel-original.xml.label" />
+    <Content Include="labeltemplates\userlabel2.xml - Copy.label" />
+    <Content Include="labeltemplates\visitor-badge.label" />
+    <Content Include="admin\web.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\PublishProfiles\Production %28Apps%29.pubxml" />
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="StoreMaster.Master" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LNF\LNF.Impl\LNF.Impl.csproj">
+      <Project>{7a6cd165-0c48-4680-9a49-281688eb1cd8}</Project>
+      <Name>LNF.Impl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lnf\LNF.Models\LNF.Models.csproj">
+      <Project>{98c7f73d-ef9d-4a87-8b79-a1208085cfbd}</Project>
+      <Name>LNF.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\lnf\LNF.Printing\LNF.Printing.csproj">
+      <Project>{7d548d87-f609-45d7-b3af-bcb99996931e}</Project>
+      <Name>LNF.Printing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LNF\LNF.Web\LNF.Web.csproj">
+      <Project>{f79683ff-e524-4107-a6e1-29579ee544e1}</Project>
+      <Name>LNF.Web</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\LNF\LNF\LNF.csproj">
+      <Project>{e3b73410-869b-4ba2-99ac-ad6708a27ade}</Project>
+      <Name>LNF</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\sselStore.AppCode\sselStore.AppCode.vbproj">
+      <Project>{7f38a848-451b-4151-911c-a2bfef4d040b}</Project>
+      <Name>sselStore.AppCode</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55544</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/sselstore</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
